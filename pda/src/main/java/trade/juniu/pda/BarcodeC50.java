@@ -58,12 +58,10 @@ public class BarcodeC50 extends Barcode {
         if (result == null) {
             return;
         }
-        if (mHandler == null) {
+        if (onScanBarcodeListener == null) {
             return;
         }
-        Message m = Message.obtain(mHandler, PDAConfig.BARCODE_READ);
-        m.obj = result;
-        mHandler.sendMessage(m);
+        onScanBarcodeListener.onScan(result);
     }
 
     static {

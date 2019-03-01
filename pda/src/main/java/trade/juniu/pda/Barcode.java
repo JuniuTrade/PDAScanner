@@ -9,11 +9,11 @@ import android.os.Handler;
  */
 public abstract class Barcode {
 
-    protected Handler mHandler = null;
+    protected OnScanBarcodeListener onScanBarcodeListener;
 
     public abstract void init();
 
-    public void setHandler(Handler handler) {
-        this.mHandler = handler;
+    public void setOnScanBarcodeListener(OnScanBarcodeListener onScanBarcodeListener) {
+        this.onScanBarcodeListener = onScanBarcodeListener;
     }
 }

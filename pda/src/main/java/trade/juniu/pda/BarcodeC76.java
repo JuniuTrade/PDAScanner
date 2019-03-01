@@ -54,7 +54,7 @@ public class BarcodeC76 extends Barcode {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            if (mHandler == null) {
+            if (onScanBarcodeListener == null) {
                 return;
             }
             String action = intent.getAction();
@@ -64,9 +64,7 @@ public class BarcodeC76 extends Barcode {
                 if (TextUtils.isEmpty(reason)) {
                     return;
                 }
-                Message m = Message.obtain(mHandler, PDAConfig.BARCODE_READ);
-                m.obj = reason;
-                mHandler.sendMessage(m);
+                onScanBarcodeListener.onScan(reason);
             }
         }
     }
