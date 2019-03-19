@@ -21,12 +21,12 @@ public class PDAScanner {
     }
 
     private void initDevice() {
-        Log.e("lyd", " model " + Build.MODEL);
+        Log.e("PDAScanner", "设备类型：" + Build.MODEL);
         switch (Build.MODEL) {
             case PDAConfig.DEVICE_A3X:
                 break;
             case PDAConfig.DEVICE_C50:
-                mBarcode = new BarcodeC50();
+//                mBarcode = new BarcodeC50();
                 break;
             case PDAConfig.DEVICE_C76:
                 mBarcode = new BarcodeC76(mContext);
@@ -39,6 +39,9 @@ public class PDAScanner {
     }
 
     public void setOnScanBarcodeListener(OnScanBarcodeListener onScanBarcodeListener) {
+        if(mBarcode==null){
+            return;
+        }
         mBarcode.setOnScanBarcodeListener(onScanBarcodeListener);
     }
 
