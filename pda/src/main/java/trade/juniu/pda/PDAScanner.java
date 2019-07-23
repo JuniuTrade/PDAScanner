@@ -33,13 +33,15 @@ public class PDAScanner {
                 break;
             case PDAConfig.DEVICE_SIMPHONE:
                 mBarcode = new BarcodeSimphone();
+            case PDAConfig.DEVICE_NLS_MT90:
+                mBarcode = new BarCodeNlsMT90(mContext);
             default:
                 break;
         }
     }
 
     public void setOnScanBarcodeListener(OnScanBarcodeListener onScanBarcodeListener) {
-        if(mBarcode==null){
+        if (mBarcode == null) {
             return;
         }
         mBarcode.setOnScanBarcodeListener(onScanBarcodeListener);

@@ -2,9 +2,9 @@ package trade.juniu.pdascanner;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import trade.juniu.pda.OnScanBarcodeListener;
 import trade.juniu.pda.PDAScanner;
 import trade.juniu.pda.PDASingle;

@@ -21,7 +21,11 @@ public class PDAConfig {
     /**
      * pda型号：simphone
      */
-    public static final String DEVICE_SIMPHONE= "simphone";
+    public static final String DEVICE_SIMPHONE = "simphone";
+    /**
+     * pda型号：NLS-MT90
+     */
+    public static final String DEVICE_NLS_MT90 = "NLS-MT90";
 
     /**
      * handler：消息代码，以便识别
